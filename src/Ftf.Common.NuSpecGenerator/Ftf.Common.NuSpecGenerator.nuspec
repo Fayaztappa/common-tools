@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Ftf.Common.NuSpecGenerator</id>
+    <version>1.0.0</version>
+    <title>Ftf.Common.NuSpecGenerator</title>
+    <authors>FT Friends Consulting Ltd</authors>
+    <owners>FT Friends Consulting Ltd</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Ftf.Common.NuSpecGenerator</description>
+    <copyright>Copyright ©  2017</copyright>
+  </metadata>
+  <files>
+    <file src="nuget.exe" target="build" />
+    <file src="xcopy.exe" target="build" />
+    <file src="Ftf.Common.NuSpecGenerator.targets" target="build" />
+  </files>
+
+</package>
