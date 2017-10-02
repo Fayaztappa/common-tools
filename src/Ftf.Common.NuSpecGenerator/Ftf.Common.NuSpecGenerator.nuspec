@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Ftf.Common.NuSpecGenerator</id>
-    <version>1.0.0</version>
+    <version>$version$</version>
     <title>Ftf.Common.NuSpecGenerator</title>
     <authors>FT Friends Consulting Ltd</authors>
     <owners>FT Friends Consulting Ltd</owners>

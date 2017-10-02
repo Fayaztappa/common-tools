@@ -9,6 +9,6 @@
     
     <Exec Command="&quot;$(MSBuildThisFileDirectory)nuget.exe&quot; pack &quot;$(MSBuildProjectDirectory)\$(MSBuildProjectFile)&quot; -Symbols -OutputDirectory &quot;$(TargetDir) &quot; -Properties Configuration=$(Configuration)"/>
     
-    <Exec Command="xcopy.exe  &quot;$(TargetDir)*.nupkg&quot; &quot;$(NuGetRepository) &quot;" WorkingDirectory="$(MSBuildThisFileDirectory)" />
+    <!--<Exec Command="xcopy.exe  &quot;$(TargetDir)*.nupkg&quot; &quot;$(NuGetRepository) &quot;" WorkingDirectory="$(MSBuildThisFileDirectory)" />-->
   </Target>
 </Project>
