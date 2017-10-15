@@ -1,13 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (c)  Microsoft.  All Rights Reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information. -->
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  
+  <Target Name="BeforeBuild">
+
+    <Exec Command="&quot;$(MSBuildThisFileDirectory)nuget.exe&quot; spec &quot;$(MSBuildProjectDirectory)\$(MSBuildProjectFile)&quot;"/>
+
+  </Target>
   <Target Name="AfterBuild">
 
     <PropertyGroup>
       <NuGetRepository>C:\Development\LocalNugetFolder</NuGetRepository>
     </PropertyGroup>
     
-    <Exec Command="&quot;$(MSBuildThisFileDirectory)nuget.exe&quot; pack &quot;$(MSBuildProjectDirectory)\$(MSBuildProjectFile)&quot; -Symbols -OutputDirectory &quot;$(TargetDir) &quot; -Properties Configuration=$(Configuration)"/>
+    <Exec Command="&quot;$(MSBuildThisFileDirectory)nuget.exe&quot; pack &quot;$(MSBuildProjectDirectory)\$(MSBuildProjectFile)&quot; -Symbols -OutputDirectory &quot;$(TargetDir) &quot; -IncludeReferencedProjects -Properties Configuration=$(Configuration)"/>
     
     <!--<Exec Command="xcopy.exe  &quot;$(TargetDir)*.nupkg&quot; &quot;$(NuGetRepository) &quot;" WorkingDirectory="$(MSBuildThisFileDirectory)" />-->
   </Target>
